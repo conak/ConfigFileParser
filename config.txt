@@ -1,0 +1,15 @@
+
+code_dir	{root_dir}\config
+root_dir    C:\Users\conak\Dropbox\dev
+
+#a comment
+
+empty_key_with_whitespace 
+empty_key_no_whitespace
+#SHOULDNT_SEE_ME nothing to see here
+backslash   \
+path    C:{backslash}Users{backslash}conak{backslash}Dropbox{backslash}dev
+another_empty_key
+
+my_code	a block: {__LEFT_CURLY_BRACE__} //some code... {__RIGHT_CURLY_BRACE__};
+

@@ -1,0 +1,37 @@
+# Comment lines start with #
+# Each line contains a key, followed by one or more spaces and/or tabs, followed by a value
+# Enclose key names in {} to insert the value of another key into a value string
+
+# Keys can be referenced before they're defined
+# Code dir evaluates to "C:\Users\conak\Dropbox\dev\config"
+code_dir        {dev_dir}\config
+dev_dir         {dropbox_dir}\dev
+dropbox_dir     {home_dir}\Dropbox
+home_dir        {user_dir}\{user_name}
+user_dir        {drive}:\Users
+user_name       conak
+drive           C
+
+# Undefined (e.g., misspelled) keys will produce an error
+#misspelled_home_dir	{homedir}\Dropbox
+
+# Key names are case sensitive
+#unrecognized	{Home_dir}\Dropbox
+
+# Duplicate keys will be caught
+#drive	causes error because drive is already defined
+
+key_with_no_value_is_OK
+
+message		Values can contain spaces
+
+leading_space	{__SPACE__}Use built-in keys to produce leading spaces or tabs in value strings
+literal_curly_brace ...or to produce literal curly braces {__LEFT_CURLY_BRACE__}{__RIGHT_CURLY_BRACE__}
+
+# Built-in keys:
+my_text		[{__SPACE__}{__LEFT_CURLY_BRACE__}{__TAB__}{__RIGHT_CURLY_BRACE__}]
+# Generates the text [ {	}]
+
+# Keys cannot be circularly defined
+#my_answer	My answer is {your_answer}
+#your_answer	Your answer is {my_answer}

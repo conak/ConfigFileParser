@@ -1,0 +1,5 @@
+
+code_dir	{root_dir}\config
+root_dir    C:\Users\conak\Dropbox\dev
+load_dir    {prc_dir}\load
+prc_dir     {load_dir}\prc
